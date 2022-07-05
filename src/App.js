@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 function App() {
   return (
     <>
-    <NavBar name = {"Minimal Home"} />
+    <NavBar name={'Minimal Home'} />
     </>
 
   );
