@@ -1,8 +1,10 @@
-const ItemListContainer = ({greeting}) => {
-    const page = greeting.toUpperCase ();
+import ItemCount from "./ItemCount";
+
+const ItemListContainer = () => {
+    
     return ( 
         <>
-        {page}  
+        <ItemCount/>
         </>
      );
 }
