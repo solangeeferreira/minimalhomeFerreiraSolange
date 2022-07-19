@@ -2,12 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   return (
     <>
-    <NavBar name={'Minimal Home'} />
-    <ItemListContainer greeting={'Bienvenidos a Minimal Home'} />
+    {/*<NavBar name={'Minimal Home'} />
+    <ItemListContainer greeting={'Bienvenidos a Minimal Home'}/>*/}
+    <ItemDetailContainer/>
     </>
 
   );

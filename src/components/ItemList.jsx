@@ -8,13 +8,9 @@ const ItemList = (props) => {
             props.items.map((cadaItem) => {
                         return(
                         <Item title={cadaItem.title} price={cadaItem.price} img={cadaItem.imgUrl} />   
-                    )
-            }
-
-            )
+                    )})
         }
-    </>
-     );
+    </>);
 }
  
 export default ItemList;

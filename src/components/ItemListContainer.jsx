@@ -17,6 +17,12 @@ const ItemListContainer = (props) => {
         price: "$2500,00",
         imgUrl: "/img/art02.jpg",
     },
+    {
+        id: 3,
+        title: "Lapicero David",
+        price: "$2000,00",
+        imgUrl: "/img/art03.jpg",
+    },
     ];
 
     const [items, setItems] = useState([]);
@@ -28,7 +34,7 @@ const ItemListContainer = (props) => {
 
         promise
             .then ((res) =>{
-                setItems(products);
+                setItems(res);
             }) 
             .catch ((err) => console.error(err)) 
     }, []);

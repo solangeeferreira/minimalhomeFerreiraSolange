@@ -1,0 +1,10 @@
+{
+    "id": 1,
+    "title": "Jarrón Magnolia",
+    "price": "$2500,00",
+    "discount": "10",
+    "material":"Vidrio",
+    "size":"10 x 20cm",
+    "imgUrl": "/img/art01.jpg",
+    "description":"Jarrón pequeño de vidrio. Cuidados: limpieza con paño húmedo. No golpear."
+}
