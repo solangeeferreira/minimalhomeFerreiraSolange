@@ -3,13 +3,21 @@ import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
     <>
-    {/*<NavBar name={'Minimal Home'} />
-    <ItemListContainer greeting={'Bienvenidos a Minimal Home'}/>*/}
-    <ItemDetailContainer/>
+    <BrowserRouter>
+      <NavBar name={'Minimal Home'} />
+      <Routes>
+        <Route index element={<ItemListContainer/>} />
+        <Route path='/nav' element={<NavBar name={'Minimal Home'}/>} />
+        <Route path='/category/:name' element={<ItemListContainer/>} />
+        <Route path='/item/:id'element={<ItemDetailContainer/>} />
+      </Routes>
+    </BrowserRouter>
     </>
 
   );

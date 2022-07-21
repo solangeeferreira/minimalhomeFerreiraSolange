@@ -1,15 +1,20 @@
 import Item from "./Item";
 
-const ItemList = (props) => {
+const ItemList = ({items}) => {
 
     return ( 
     <>
-        {
-            props.items.map((cadaItem) => {
-                        return(
-                        <Item title={cadaItem.title} price={cadaItem.price} img={cadaItem.imgUrl} />   
-                    )})
-        }
+    <div className="container">
+        <div className="row">
+            {items.map((item) => {
+                return(
+                    <div key={item.id} className="col-sm" style={{margin:"1rem"}}>
+                        <Item item={item} />   
+                    </div>
+                )})
+            }
+        </div>
+    </div>
     </>);
 }
  

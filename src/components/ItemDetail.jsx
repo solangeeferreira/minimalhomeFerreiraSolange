@@ -12,7 +12,6 @@ const ItemDetail = ({ items }) => {
                 <p className="card-text">Material: {material}</p>
                 <p className="card-text">Tamaño:{size}</p>
                 <p className="card-text">Descripción: {description}</p>
-                <a href="#" className="btn btn-primary">Comprar</a>
             </div>
             </div>
         </div>

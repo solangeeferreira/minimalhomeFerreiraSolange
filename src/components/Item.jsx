@@ -1,16 +1,16 @@
-const Item = ({title, price, img}) => {
+import { Link } from "react-router-dom";
+
+const Item = ({item}) => {
+    const {title, price, imgUrl, id} = item;
     return ( 
-        <div className="d-flex flex-row justify-content-center flex-wrap">
-        <div className="card text-center " style={{width:"18rem"}} >
-            <img src={img} className="card-img-top" alt="Foto de producto"/>
+        <div className="card text-center d-flex flex-column justify-content-center" style={{width:"20rem"}} >
+            <img src={imgUrl} className="card-img-top" alt="Foto de producto"/>
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{price}</p>
-                <a href="#" className="btn btn-primary">Comprar</a>
+                <Link className="btn btn-primary" to={`item/${id}`}>Ver detalles del producto</Link>
             </div>
-        </div>
-    </div>
-     );
+        </div>);
 }
  
 export default Item;
