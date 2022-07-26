@@ -9,7 +9,7 @@ const ItemListContainer = () => {
     const products = [
     {
         id: 1,
-        title: " Magnolia",
+        title: "Florero Magnolia",
         price: "$2500,00",
         imgUrl: "/img/art01.jpg",
         category:"florero",
@@ -72,7 +72,6 @@ const ItemListContainer = () => {
     
     return ( 
         <>
-        {/*<ItemCount/>*/}
         <ItemList items={items} />
         </>
      );
