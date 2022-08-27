@@ -1,3 +1,5 @@
+import CartWidget from "./CartWidget";
+
 const NavBar = ({name}) => {
     const displayName= name.toUpperCase ();
 
@@ -27,6 +29,7 @@ const NavBar = ({name}) => {
                 </form>
                 </div>
             </div>
+            <CartWidget/>
         </nav>
         </> 
 
