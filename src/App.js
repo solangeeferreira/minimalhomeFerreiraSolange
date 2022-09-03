@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <NavBar name={'Minimal Home'} />
-    <ItemListContainer greeting={'Bienvenido a Minimal Home'} />    
+    <ItemListContainer />    
     </>
   );
 }
