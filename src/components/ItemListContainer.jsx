@@ -1,6 +1,8 @@
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 
 const ItemListContainer = () => {
@@ -50,6 +52,8 @@ const ItemListContainer = () => {
         },
     
         ];
+
+        const {name} = useParams();
     
         const [items, setItems] = useState([]);
     
@@ -58,11 +62,16 @@ const ItemListContainer = () => {
                 setTimeout (() => (resolve (products)), 2000)
             })
     
-            promise
-                .then ((res) =>{
-                    setItems(products);
+            promise.then ((res) => {
+                const prod = res;
+                if (name) {
+                   setItems(prod.filter((producto) => producto.category ==name)) 
+                } else {
+                    setItems(prod);
+                }
                 }); 
-        }, []);
+        }, [name]);
+        
     return ( 
         <>
         <ItemCount/>
