@@ -1,33 +1,21 @@
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import details from "./utils/details.json"
 
 const ItemDetailContainer = () => {
+    const {id} = useParams();
+    const [items, setItems]= useState({});
 
-    const productsDetails = [
-        {
-            "id": 1,
-            "title": "Jarrón Magnolia",
-            "price": "$2500,00",
-            "stock": "10",
-            "imgUrl": "/img/art01.jpg",    
-            "discount": "10",
-            "material":"Vidrio",
-            "size":"10 x 20cm",
-            "description":"Jarrón pequeño de vidrio. Cuidados: limpieza con paño húmedo. No golpear."
-        }
-    ];
-
-    const [items, setItems]= useState([]);
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => (resolve(details)), 3000);
+    })
 
     useEffect (() => {
-        const promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                (resolve(productsDetails))
-            }, 3000);
-        })
-
         promise.then ((res) => {
-            setItems (productsDetails);
+            const foundItem = res.filter (item => item.id == id)
+            setItems(foundItem[0]);
         });
 
     },[]);

@@ -1,0 +1,69 @@
+[
+    {
+    "id": 1,
+    "title": "Jarrón Magnolia",
+    "price": "$2500,00",
+    "stock": "10",
+    "imgUrl": "/img/art01.jpg",    
+    "discount": "10",
+    "material":"Vidrio",
+    "size":"10 x 20cm",
+    "description":"Jarrón pequeño de vidrio. Cuidados: limpieza con paño húmedo. No golpear."
+},
+{
+    "id": 2,
+    "title": "Florero Ámbar",
+    "price": "$2500,00",
+    "stock": "7",
+    "imgUrl": "/img/art02.jpg",
+    "discount": "10",
+    "material":"Porcelana",
+    "size":"15 x 20cm",
+    "description":"Jarrón pequeño de porcelana, con forma de rostro. Cuidados: No golpear."
+},
+{
+    "id": 3,
+    "title": "Lapicero David",
+    "price": "$2000,00",
+    "stock": "15",
+    "imgUrl": "/img/art03.jpg",
+    "discount": "10",
+    "material":"Porcelana",
+    "size":"10 x 10cm",
+    "description":"Lapicero porcelana, rostro David. Cuidados: No golpear."
+},
+{
+    "id": 4,
+    "title": "Vela Silueta",
+    "price": "$1900,00",
+    "stock": "30",
+    "imgUrl": "/img/art04.jpg",
+    "discount": "10",
+    "material":"Cera de soja",
+    "size":"5 x 10cm",
+    "description":"Vela cera de soja. Cuidados: No exponer a altas temperaturas."
+},
+{
+    "id": 5,
+    "title": "Florero Almendra",
+    "price": "$2400,00",
+    "stock": "10",
+    "imgUrl": "/img/art05.jpg",
+    "discount": "10",
+    "material":"Porcelana",
+    "size":"15 x 15cm",
+    "description":"Florero en forma de almeja. Cuidados: No golpear."
+},
+{
+    "id": 6,
+    "title": "Florero Marga",
+    "price": "$1800,00",
+    "stock": "10",
+    "imgUrl": "/img/art06.jpg",
+    "discount": "10",
+    "material":"Vidrio",
+    "size":"6 x 10cm",
+    "description":"Florero pequeño, vidrio moteado color ámbar. Cuidados: No golpear."
+}
+
+]
