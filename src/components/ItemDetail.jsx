@@ -1,13 +1,20 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 
 const ItemDetail = ({items}) => {
+    const {addItem} = useContext(CartContext);
+    const {setCartItems} = useContext(CartContext);
+
+
     const [amount, setAmount] = useState(0);
     const {title, price, stock, discount, material, size, description, imgUrl} = items;
-    const onAdd = (amount) => {
-        setAmount(amount);
+    const onAdd = (count) => {
+        addItem (items, count);
+
+        setAmount(count);
     };
 
     return (  
@@ -24,7 +31,7 @@ const ItemDetail = ({items}) => {
                 <p className="card-text">Tamaño:{size}</p>
                 <p className="card-text">Descripción: {description}</p>
             </div>
-            {amount == 0 ? <ItemCount onAdd={onAdd}/> : <h3>Se han comprado {amount} items</h3>}
+            {amount == 0 && <ItemCount onAdd={onAdd}/>}
             </div>
         </div>
         <div className="d-flex justify-content-center">
