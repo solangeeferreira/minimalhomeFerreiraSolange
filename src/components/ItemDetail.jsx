@@ -1,12 +1,19 @@
+import { useState } from "react";
+import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
 
 const ItemDetail = ({items}) => {
+    const [amount, setAmount] = useState(0);
     const {title, price, stock, discount, material, size, description, imgUrl} = items;
+    const onAdd = (amount) => {
+        setAmount(amount);
+    };
 
     return (  
         <>
         <div className="d-flex flex-row justify-content-center flex-wrap">
-            <div className="card text-center" style={{width:"18rem"}} >
+            <div className="card text-center" style={{width:"20rem"}} >
             <img src={imgUrl} className="card-img-top" alt="Foto de producto"/>
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
@@ -17,10 +24,13 @@ const ItemDetail = ({items}) => {
                 <p className="card-text">Tamaño:{size}</p>
                 <p className="card-text">Descripción: {description}</p>
             </div>
+            {amount == 0 ? <ItemCount onAdd={onAdd}/> : <h3>Se han comprado {amount} items</h3>}
             </div>
         </div>
         <div className="d-flex justify-content-center">
-            <button>Terminar compra</button>
+            <Link to={"/cart"}>
+            <button type="button" class="btn btn-outline-info">Terminar compra</button>            
+            </Link>
         </div>
         </>);
 }
